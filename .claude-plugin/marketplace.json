@@ -1,0 +1,18 @@
+{
+  "name": "steuer-marketplace",
+  "owner": {
+    "name": "Stefan Stadler"
+  },
+  "metadata": {
+    "description": "Steuer-Workflow für Landwirtschaft, Vermietung, Freiberuf und PV"
+  },
+  "plugins": [
+    {
+      "name": "steuer",
+      "source": "./",
+      "description": "Jahresunabhängiger Steuer-Workflow: Belege sortieren, Online-Rechnungen laden, Steuerlast schätzen, Umsatzsteuer vorbereiten.",
+      "version": "0.1.0",
+      "keywords": ["steuer", "wiso", "datev", "umsatzsteuer"]
+    }
+  ]
+}

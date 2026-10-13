@@ -25,7 +25,7 @@ unloved sectors value investing opportunities [Monat Jahr]
 |---|---|
 | 1 | gurufocus.com (GF Value, DCF), finviz.com (Value-Filter), morningstar.com (Moat-Rating, Fair Value) |
 | 2 | seekingalpha.com, fool.com, valueinvesting.io, macrotrends.net |
-| 3 | boerse.de, finanzen.net |
+| 3 | finanzen.net |
 
 Bei Widersprüchen gewinnt die höhere Stufe.
 
@@ -54,16 +54,12 @@ Mindestens **3 von 5** Kriterien erfüllen:
 
 Vorgehen: Longlist mit 8 bis 10 Werten, Trap-Filter anwenden, für die Top 5 P/B, P/FCF, Abschlag, Burggraben und Katalysator nachschlagen, Diversität prüfen.
 
-## Verifikation über boerse.de
-
-boerse.de-Rating abrufen (AAA bis C, nicht abrufbar: `k.A.`). Ein niedrigeres Rating wie BBB oder BB schließt hier nicht aus, wird aber ausgewiesen. BOTSI-Rang nur nennen, wenn verfügbar.
-
 ## Ausgabe
 
 Überschrift `## 💎 Value Picks – Langfrist 5x–10x Potenzial`, dann Tabelle:
 
 ```
-| # | Ticker | Firma | Region | Branche | Kurs | Fwd-KGV | P/B | P/FCF | Rabatt z. IV | EPS-Wachstum | Burggraben | Katalysator | boerse.de | Status |
+| # | Ticker | Firma | Region | Branche | Kurs | Fwd-KGV | P/B | P/FCF | Rabatt z. IV | EPS-Wachstum | Burggraben | Katalysator | Status |
 ```
 
 - **Rabatt z. IV**: Abschlag zum fairen Wert in Prozent, positiv heißt günstiger als Fair Value. Nicht verfügbar: `k.A.`

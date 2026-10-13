@@ -47,12 +47,11 @@
       "name": "aktien",
       "source": "./plugins/aktien",
       "description": "Aktien identifizieren: trendstarke Momentum-Werte, Value-Picks mit Langfristpotenzial und ein tägliches Morgen-Briefing.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "keywords": [
         "aktien",
         "momentum",
         "value",
-        "botsi",
         "briefing"
       ]
     }

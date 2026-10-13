@@ -6,13 +6,19 @@ Identifiziert Aktien nach festen Filtern: trendstarke Momentum-Werte, unterbewer
 
 | Skill | Zweck |
 |---|---|
-| `momentum` | 5 bis 10 trendstärkste Aktien weltweit aus Kursmomentum, Fundamentaldaten und Expert Signals (TechCrunch, CEO-Aussagen), mit BOTSI-Rang und boerse.de-Rating |
+| `momentum` | 5 bis 10 trendstärkste Aktien weltweit aus Kursmomentum, Fundamentaldaten und Expert Signals (TechCrunch, CEO-Aussagen) |
 | `value` | 5 global unterbewertete Aktien mit 5x bis 10x Langfristpotenzial, mit Value-Trap-Filter, Burggraben und Katalysator |
 | `briefing` | Tägliches Morgen-Briefing: News der letzten 24 Stunden, dann `momentum` und `value` in einem Text |
 
 ## Voraussetzung
 
-Websuche muss verfügbar sein. Es werden keine Dateien erzeugt, die Ausgabe kommt als Markdown in den Chat.
+Websuche und Abruf von Webseiten (WebFetch) müssen verfügbar sein. Es werden keine Dateien erzeugt, die Ausgabe kommt als Markdown in den Chat.
+
+## Datenquellen
+
+- **News:** RSS-Feeds von Handelsblatt, MarketWatch, Investing.com und TechCrunch, per WebSearch ergänzt oder ersetzt, wenn ein Feed ausfällt.
+- **Expert Signals:** TechCrunch-Feed, danach WebSearch nach CEO-Aussagen und Earnings Calls.
+- **Kennzahlen:** Websuche, vor allem finviz und Yahoo Finance.
 
 ## Optional: Twelve Data
 

@@ -1,0 +1,9 @@
+{
+  "name": "aktien",
+  "version": "0.1.0",
+  "description": "Aktien identifizieren: trendstarke Momentum-Werte weltweit, Value-Picks mit Langfristpotenzial und ein tägliches Morgen-Briefing, jeweils mit klaren Filtern und Quellenrangfolge.",
+  "author": {
+    "name": "Stefan Stadler"
+  },
+  "keywords": ["aktien", "momentum", "value", "botsi", "briefing"]
+}

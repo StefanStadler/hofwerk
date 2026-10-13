@@ -21,9 +21,11 @@ Persönliche Angaben (Konten, Kredite, Annahmen, Vorauswertungen, feste Entschei
 8. **Konten abgrenzen:** Was nicht auf dem ausgewerteten Konto liegt (Kreditrate, Strom, Wasser, Gebäude- und Kfz-Versicherung, Steuern), ausdrücklich nennen und aus dem Profil oder der Vorauswertung ergänzen.
 9. **Gesamtbedarf** bilden: Lebenshaltung plus Kredittilgung, Krankenversicherung für die Zeit ohne Gehalt und Einkommensteuer, jeweils als Annahme gekennzeichnet. Mit der Vorauswertung im Profil vergleichen und die größten Abweichungen benennen.
 
-## Ablage der Kontoauszüge
+## Dokumenteingang
 
-Jeder Export, den der Nutzer bereitstellt, wird lokal im Finanzordner gesichert, damit er beim nächsten Mal nicht erneut geliefert werden muss: `<Finanzordner>/Kontoauszuege/<Konto>/<von>_bis_<bis>_<Hash>.csv`. Der Kontoname kommt aus dem Profil. Kopierter Text wird dabei als CSV mit festen Datumsangaben gespeichert, weil „Heute“ und „Gestern“ später nicht mehr stimmen. Bereits abgelegte Inhalte werden übersprungen. Überlappende Exporte zählen einmal. Beim nächsten Lauf genügt der Ordner als Eingabe, dann liest das Skript alle Exporte und ergänzt nur den neuen.
+Jede Datei, die der Nutzer im Chat schickt (Kontoexport, Kontoauszug, Bescheid), kommt zuerst unverändert in den Eingang: `<Finanzordner>/1_Eingang/`, Kontoauszüge nach `Kontoauszuege/<Konto>/`, Bescheide und Verträge nach `Bescheide_Vertraege/`, alles andere nach `Sonstiges/`. Originalname und Inhalt bleiben, nichts wird umbenannt, gedreht oder geändert. Erst danach wird gerechnet, immer aus einer Kopie. Dem Nutzer in einem Satz sagen, wo das Original liegt. Ist kein Finanzordner verbunden, trotzdem auswerten und darauf hinweisen, dass das Original noch nicht abgelegt ist.
+
+Für Kontoauszüge übernimmt das `--ablegen`: Es kopiert das Original byte-identisch, überspringt gleiche Inhalte und setzt bei eingefügtem Text mit „Heute“ und „Gestern“ das Einfügedatum als Namenspräfix, damit die Daten später stimmen. Text aus dem Chat zuerst unverändert als Datei speichern (z. B. `einfuegung.txt`) und dann ablegen. Beim nächsten Lauf genügt der Ordner `1_Eingang/Kontoauszuege` als Eingabe. Überlappende Exporte zählen einmal.
 
 ## Skript
 

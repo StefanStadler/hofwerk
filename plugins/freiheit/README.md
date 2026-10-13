@@ -12,7 +12,7 @@ Werkzeuge für den Weg zur finanziellen Freiheit: Was brauche ich im Monat, und 
 
 ## Skript
 
-`skills/bedarf/scripts/kontoauswertung.py` wertet CSV-Exporte oder kopierten Text aus (nur Python-Standardbibliothek). Mit `--ablegen` sichert es die Exporte lokal unter `<Finanzordner>/Kontoauszuege/<Konto>/` und führt mehrere Exporte ohne Dubletten zusammen. Händlerregeln: `skills/bedarf/references/kategorien.json`.
+`skills/bedarf/scripts/kontoauswertung.py` wertet CSV-Exporte oder kopierten Text aus (nur Python-Standardbibliothek). Mit `--ablegen` kopiert es die Originale unverändert nach `<Finanzordner>/1_Eingang/Kontoauszuege/<Konto>/` und führt mehrere Exporte ohne Dubletten zusammen. Händlerregeln: `skills/bedarf/references/kategorien.json`.
 
 ## Persönliche Daten
 
@@ -20,6 +20,7 @@ Das Plugin enthält keine persönlichen Daten. Quellen des passiven Einkommens, 
 
 ## Benutzung
 
+0. Den Finanzordner einmal pro Sitzung freigeben, `start` fragt danach und fordert den Zugriff an. Dateien aus dem Chat landen immer zuerst unverändert in `1_Eingang`.
 1. Beim ersten Mal: "Richte mein Finanzprofil ein" (Skill `start`). Die Datei `Finanzprofil.md` liegt danach im Finanzordner und ist der gespeicherte Stand.
 2. Kontoauszüge als CSV oder kopierten Text bereitstellen.
 3. Anfrage stellen, z. B. "Berechne meine Fixkosten" oder "Reicht mein passives Einkommen?"

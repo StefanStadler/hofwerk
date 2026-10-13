@@ -7,7 +7,7 @@ Diese Datei ausfüllen und als `Finanzprofil.md` im Finanzordner oder Projekt ab
 - Wohnsituation (Eigentum, Kredit):
 
 ## Konten
-Kontoauszüge liegen lokal unter `Kontoauszuege/<Konto>/` im Finanzordner (CSV, je Export eine Datei).
+Originale liegen unverändert im Finanzordner unter `1_Eingang/Kontoauszuege/<Konto>/`.
 - Girokonto (Bank, wofür):
 - Weitere Konten (Landwirtschaft, Vermietung, Tagesgeld, Depot):
 - Wiederkehrende Überträge zwischen eigenen Konten:

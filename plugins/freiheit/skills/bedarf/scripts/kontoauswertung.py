@@ -4,7 +4,7 @@
 Eingabe: CSV-Export (Spalten Buchungstag, Buchungstext, Umsatz) oder kopierter Text
          (Zeilen: Datum <TAB> Text <TAB> Betrag). Nur Standardbibliothek.
 Aufruf:  python3 kontoauswertung.py umsaetze.csv [weitere.csv|Ordner] --heute 2026-10-13 --inhaber "Vorname Nachname"
-         --ablegen <Finanzordner> --konto Girokonto   (Exporte lokal sichern)
+         --ablegen <Finanzordner> --konto Girokonto   (Originale im Eingang sichern)
 """
 import argparse, csv, json, re, statistics, sys
 from collections import defaultdict
@@ -35,6 +35,9 @@ def datum(s, heute):
 
 
 def lade(pfad, heute):
+    m = re.match(r"(\d{4})-(\d{2})-(\d{2})_", Path(pfad).name)
+    if m:  # Präfix = Einfügedatum für Heute/Gestern
+        heute = date(int(m[1]), int(m[2]), int(m[3]))
     roh = Path(pfad).read_text(encoding="utf-8-sig", errors="replace")
     zeilen, kopf = [], None
     for z in roh.splitlines():
@@ -108,27 +111,27 @@ def zusammenfuehren(listen):
     return sorted(best.elements())
 
 
-def ablegen(datei, zeilen, ziel, konto):
-    """Export nach <ziel>/Kontoauszuege/<konto>/ sichern. Kopierter Text wird als CSV mit
-    festen Datumsangaben gespeichert. Schon vorhandene Inhalte (Hash) werden übersprungen."""
-    import hashlib
-    ordner = Path(ziel) / "Kontoauszuege" / konto
+def ablegen(datei, ziel, konto, heute):
+    """Original unverändert nach <ziel>/1_Eingang/Kontoauszuege/<konto>/ kopieren.
+    Gleiche Inhalte (Hash) werden übersprungen. Enthält ein Text relative Datumsangaben
+    (Heute, Gestern), bekommt der Dateiname das Einfügedatum als Präfix, damit sie später
+    richtig aufgelöst werden."""
+    import hashlib, shutil
+    ordner = Path(ziel) / "1_Eingang" / "Kontoauszuege" / konto
     ordner.mkdir(parents=True, exist_ok=True)
-    roh = datei.read_text(encoding="utf-8-sig", errors="replace")
-    ist_csv = ";" in roh and "Buchungstag" in roh
-    if ist_csv:
-        inhalt, endung = roh, ".csv"
-    else:
-        zeilen_csv = ["Buchungstag;Buchungstext;Umsatz in EUR"] + [
-            f"{d:%d.%m.%Y};{t.replace(';', ',')};" + f"{b:.2f}".replace(".", ",")
-            for d, t, b in zeilen]
-        inhalt, endung = "\n".join(zeilen_csv) + "\n", ".csv"
-    h = hashlib.sha256(inhalt.encode("utf-8")).hexdigest()[:8]
-    if any(f.name.endswith(f"_{h}{endung}") for f in ordner.iterdir()):
-        return None
-    von, bis = zeilen[0][0], zeilen[-1][0]
-    ziel_datei = ordner / f"{von:%Y-%m-%d}_bis_{bis:%Y-%m-%d}_{h}{endung}"
-    ziel_datei.write_text(inhalt, encoding="utf-8")
+    daten = datei.read_bytes()
+    h = hashlib.sha256(daten).hexdigest()
+    for f in ordner.iterdir():
+        if f.is_file() and hashlib.sha256(f.read_bytes()).hexdigest() == h:
+            return None
+    name = datei.name
+    roh = daten.decode("utf-8-sig", errors="replace")
+    if re.search(r"^(heute|gestern)\t", roh, re.I | re.M) and not re.match(r"\d{4}-\d{2}-\d{2}_", name):
+        name = f"{heute:%Y-%m-%d}_{name}"
+    ziel_datei = ordner / name
+    if ziel_datei.exists():
+        ziel_datei = ordner / f"{ziel_datei.stem}_{h[:8]}{ziel_datei.suffix}"
+    shutil.copy2(datei, ziel_datei)
     return ziel_datei
 
 
@@ -139,7 +142,7 @@ def monat(d):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("dateien", nargs="+", help="Dateien oder Ordner (Ordner werden rekursiv gelesen)")
-    p.add_argument("--ablegen", metavar="FINANZORDNER", help="Exporte nach <Ordner>/Kontoauszuege/<Konto>/ sichern")
+    p.add_argument("--ablegen", metavar="FINANZORDNER", help="Originale unverändert nach <Ordner>/1_Eingang/Kontoauszuege/<Konto>/ kopieren")
     p.add_argument("--konto", default="Girokonto", help="Kontoname für die Ablage")
     p.add_argument("--heute", default=date.today().isoformat())
     p.add_argument("--inhaber", default="", help="Name des Kontoinhabers, erkennt Überträge")
@@ -153,7 +156,7 @@ def main():
     if a.ablegen:
         for f, z in zip(dateien, listen):
             if z:
-                ziel = ablegen(f, z, a.ablegen, a.konto)
+                ziel = ablegen(f, a.ablegen, a.konto, heute)
                 print(f"Abgelegt: {ziel}" if ziel else f"Schon vorhanden, übersprungen: {f.name}", file=sys.stderr)
     umsaetze = zusammenfuehren(listen)
     if not umsaetze:

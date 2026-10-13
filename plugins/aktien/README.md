@@ -19,6 +19,7 @@ Websuche und Abruf von Webseiten (WebFetch) müssen verfügbar sein. Es werden k
 - **News:** Feeds von Finanznachrichten.de, Handelsblatt, MarketWatch, Investing.com und TechCrunch, per WebSearch ergänzt oder ersetzt, wenn ein Feed ausfällt.
 - **Expert Signals:** TechCrunch-Feed, danach WebSearch nach CEO-Aussagen und Earnings Calls.
 - **Kennzahlen:** Websuche, vor allem finviz und Yahoo Finance.
+- **Google Finance:** Kurs, 52-Wochen-Spanne und KGV für Aktien außerhalb der US-Börsen sowie die aktuellen Schlagzeilen je Shortlist-Aktie.
 
 ## Optional: Twelve Data
 

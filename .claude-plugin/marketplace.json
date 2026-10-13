@@ -47,7 +47,7 @@
       "name": "aktien",
       "source": "./plugins/aktien",
       "description": "Aktien identifizieren: trendstarke Momentum-Werte, Value-Picks mit Langfristpotenzial und ein tägliches Morgen-Briefing.",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "keywords": [
         "aktien",
         "momentum",

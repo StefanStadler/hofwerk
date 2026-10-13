@@ -53,10 +53,18 @@ Der kostenlose Plan hat 800 Credits pro Tag und 8 Credits pro Minute. Deshalb gi
    - `get_technical_indicator` mit `SMA`, `time_period` 200, `outputsize` 1 (GD200)
 3. Performance über 1, 3 und 6 Monate: optional über `get_technical_indicator` mit `ROC` und `time_period` 21, 63 und 126, nur wenn das Minutenlimit es zulässt. Sonst Websuche. YTD kommt immer aus der Websuche.
 4. Meldet ein Aufruf, dass die Credits der aktuellen Minute aufgebraucht sind: etwa 60 Sekunden warten (z. B. `sleep 60` in der Shell) und denselben Aufruf wiederholen. Meldet er das Tageslimit: für die übrigen Aktien auf die Websuche wechseln.
-5. Der kostenlose Plan deckt nur US-Börsen ab, auch ADRs wie ASML. Für Heimatbörsen (z. B. XETR) und teils für Asien kommt die Meldung, dass der Plan nicht reicht. Dann für diese Aktie die Websuche nehmen, nicht erneut versuchen.
+5. Der kostenlose Plan deckt nur US-Börsen ab, auch ADRs wie ASML. Für Heimatbörsen (z. B. XETR) und teils für Asien kommt die Meldung, dass der Plan nicht reicht. Dann für diese Aktie Google Finance (siehe unten) nehmen, nicht erneut bei Twelve Data versuchen.
 6. Nicht im kostenlosen Plan: Forward-KGV, PEG, KBV, Cashflow, Gewinnschätzungen und Wachstumsraten (`get_statistics`, `get_financials`, Teile von `get_analyst_data`). Diese Werte kommen weiter aus der Websuche (finviz).
 
 **Vorrang:** Bei Kurs, RSI, GD50, GD200 und 52-Wochen-Spanne gewinnt Twelve Data vor allen Websuche-Quellen. Weicht die Websuche stark ab, Twelve Data nehmen und nichts melden. Twelve Data in der Sources-Liste als Quelle für Kurs und technische Werte nennen.
+
+## Google Finance (Ergänzung)
+
+Per WebFetch auf `https://www.google.com/finance/quote/[TICKER]:[BÖRSE]`, z. B. `NVDA:NASDAQ` oder `SAP:ETR` (Xetra). Findet sich die Seite nicht, per WebSearch `google finance [Firma]` die URL suchen.
+
+1. **Für Aktien, die Twelve Data nicht abdeckt** (Heimatbörsen in Europa und Asien): Kurs, 52-Wochen-Spanne (daraus der Abstand zum Hoch), Marktkapitalisierung und KGV übernehmen. Das KGV dort ist rückwärtsgerichtet, nicht das Forward-KGV. Die Seite nennt den Stand der Kurse, der auch Tage zurückliegen kann. Dieses Datum in der Tabelle als `Stand: [Datum]` angeben. RSI, Forward-KGV und PEG gibt es dort nicht, die kommen aus der Websuche.
+2. **News je Shortlist-Aktie:** Die Seite zeigt vier aktuelle Schlagzeilen mit Quelle und Alter. Nur Auffälliges in die Begründung aufnehmen: Zahlen, Übernahmen, Prognosen, Aussagen des Managements. Quellen wie Benzinga, Insider Monkey und ad-hoc-news.de sind Hinweisgeber, kein Beleg. Wichtige Aussagen über eine zweite Quelle bestätigen oder weglassen.
+3. **Nicht für die Kandidatensuche nutzen.** Die Gewinner- und Verliererlisten enthalten Mikro-Werte und gehebelte ETFs.
 
 ## Auswahlkriterien
 

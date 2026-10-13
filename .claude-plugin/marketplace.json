@@ -1,15 +1,15 @@
 {
-  "name": "steuer-marketplace",
+  "name": "hofwerk",
   "owner": {
     "name": "Stefan Stadler"
   },
   "metadata": {
-    "description": "Steuer-Workflow für Landwirtschaft, Vermietung, Freiberuf und PV"
+    "description": "Hofwerk: Plugins für Hof, Steuer, PV und Betrieb"
   },
   "plugins": [
     {
-      "name": "steuer",
-      "source": "./",
+      "name": "fiskus",
+      "source": "./plugins/fiskus",
       "description": "Jahresunabhängiger Steuer-Workflow: Belege sortieren, Online-Rechnungen laden, Steuerlast schätzen, Umsatzsteuer vorbereiten.",
       "version": "0.1.0",
       "keywords": ["steuer", "wiso", "datev", "umsatzsteuer"]

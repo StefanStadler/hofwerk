@@ -1,11 +1,11 @@
 ---
-name: steuer-online-rechnungen
+name: online-rechnungen
 description: Lädt Rechnungen aus Online-Shops (Amazon, eBay) für ein Steuerjahr herunter, filtert auf steuerlich relevante Käufe (Betriebe Landwirtschaft, IT-Beratung, PV-Anlagen sowie Werbungskosten Arbeitnehmer), benennt sie nach Konvention und legt sie im Eingang ab. Verwenden bei "Amazon-Rechnungen holen", "eBay-Rechnungen", "Online-Bestellungen für die Steuer", "Rechnungen herunterladen", "Belege aus Bestellhistorie" oder wenn Kaufbelege aus Shop-Konten für die Steuer gebraucht werden.
 ---
 
 # Online-Rechnungen (Amazon, eBay) für die Steuer
 
-Das Jahr `{JAHR}` kommt vom Nutzer. Nur Käufe mit Betriebsbezug oder Werbungskosten-Bezug werden geholt. Rein private Käufe bleiben außen vor. Persönliche Angaben (Bereichs-Präfixe, Betriebe, Arbeitgeber, Rechnungsadressen) stehen im `Steuerprofil.md`. Zuerst lesen. Dateinamen und Ablage folgen dem Skill `steuer-belege`.
+Das Jahr `{JAHR}` kommt vom Nutzer. Nur Käufe mit Betriebsbezug oder Werbungskosten-Bezug werden geholt. Rein private Käufe bleiben außen vor. Persönliche Angaben (Bereichs-Präfixe, Betriebe, Arbeitgeber, Rechnungsadressen) stehen im `Steuerprofil.md`. Zuerst lesen. Dateinamen und Ablage folgen dem Skill `belege`.
 
 ## Voraussetzungen
 
@@ -21,7 +21,7 @@ Das Jahr `{JAHR}` kommt vom Nutzer. Nur Käufe mit Betriebsbezug oder Werbungsko
 4. **Rechnungen herunterladen** nach Freigabe. Pro Bestellung die Rechnung als PDF speichern. Bei Marketplace-Bestellungen liegt die Rechnung oft beim Händler. Fehlt sie, "Rechnung anfordern" nutzen und die Bestellung als offen markieren, nichts erfinden.
 5. **Benennen und ablegen** in `1_Eingang/Online_Bestellungen/` nach `<Bereich>_<JJJJ-MM-TT>_<Beschreibung>_<Aussteller>_<Betrag>EUR.pdf`. Rechnungsdatum aus dem PDF, nicht das Bestelldatum, wenn beide abweichen. Betrag brutto laut Rechnung.
 6. **Abgleich** mit den Kontoauszügen (Zahlungseingang/-abgang) und mit der Bestellübersicht. Fehlende Rechnungen, Teillieferungen, Rückerstattungen und Stornos melden. Erstattete Beträge nicht als Ausgabe ansetzen.
-7. **Weiter in den Belege-Workflow**: Danach verarbeitet `steuer-belege` die Dateien (WISO-Struktur, DATEV).
+7. **Weiter in den Belege-Workflow**: Danach verarbeitet `belege` die Dateien (WISO-Struktur, DATEV).
 
 ## Relevanz: was geholt wird
 

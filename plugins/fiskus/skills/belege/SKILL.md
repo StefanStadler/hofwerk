@@ -1,5 +1,5 @@
 ---
-name: steuer-belege
+name: belege
 description: Sammelt, benennt, dreht und sortiert Steuerbelege eines Steuerjahrs in die WISO-Struktur und stellt am Ende den DATEV-Ausgang für den Steuerberater bereit. Verwenden bei "Belege sortieren", "Steuerunterlagen", "Eingang einsortieren", "DATEV-Upload vorbereiten", "Beleg benennen", "Steuerberater-Übersicht" oder wenn Scans, Fotos, Kontoauszüge oder Rechnungen für ein Steuerjahr verarbeitet werden sollen.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: steuer-ust
+name: ust
 description: Bereitet die Umsatzsteuer-Jahreserklärung eines Steuerjahrs vor, insbesondere mit PV-Anlagen (Einspeisung, Anschaffung, Vorsteuer), Land-/Forstwirtschaft nach § 24 UStG und Freiberuf, und prüft die Optionsbindung zur Regelbesteuerung. Verwenden bei "Umsatzsteuer", "USt-Jahreserklärung", "Voranmeldung", "PV Umsatzsteuer", "Option Regelbesteuerung", "Kleinunternehmer wechseln" oder "Vorsteuer PV".
 ---
 
@@ -17,7 +17,7 @@ Persönliche Angaben (Steuernummern, Anlagen, Besteuerungsform, Optionsbindung) 
 4. **Zahllast** aus Umsatzsteuer abzüglich Vorsteuer und abzüglich geleisteter Vorauszahlungen berechnen. Spanne konservativ/wahrscheinlich, wenn Daten fehlen. Fälligkeit nennen.
 5. **Optionsbindung prüfen**: Bindungsfrist je Objekt laut Profil, frühester Wechsel, Folgen eines Wechsels (u. a. Vorsteuerberichtigung). Entscheidung gehört dem Nutzer, Optionen mit Zahlen gegenüberstellen.
 6. **Steuernummern abgleichen**: Die USt-Erklärung wird unter der im Profil genannten USt-Nummer abgegeben, nicht unter der ESt- oder EÜR-Nummer. Auf Verwechslung in WISO/ELSTER achten.
-7. **Belege ablegen** nach `13_Umsatzsteuer` (Unterordner je Anlage) und als Kopie in das DATEV-Fach für PV-Anlagen (siehe Skill `steuer-belege`).
+7. **Belege ablegen** nach `13_Umsatzsteuer` (Unterordner je Anlage) und als Kopie in das DATEV-Fach für PV-Anlagen (siehe Skill `belege`).
 
 ## Ausgabe
 

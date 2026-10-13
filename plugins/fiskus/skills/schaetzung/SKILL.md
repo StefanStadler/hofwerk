@@ -1,5 +1,5 @@
 ---
-name: steuer-schaetzung
+name: schaetzung
 description: Schätzt die Steuerlast eines Steuerjahrs (Einkommensteuer inkl. Soli und ggf. Kirchensteuer, Umsatzsteuer-Zahllast) und vergleicht Szenarien wie Investition mit oder ohne Investitionsabzugsbetrag, Zuflussjahr von Zuschüssen, Forstpauschale gegen Ist-Kosten. Verwenden bei "Steuerlast schätzen", "Steuer hochrechnen", "Nachzahlung 20xx", "lohnt sich der Traktorkauf steuerlich", "Gewinn ins nächste Jahr verschieben", "IAB" oder "Steuerschätzung".
 ---
 

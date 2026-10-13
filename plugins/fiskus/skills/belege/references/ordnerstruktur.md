@@ -1,7 +1,7 @@
 # Ordnerstruktur (Steuer {JAHR})
 
 ## 1_Eingang/ (Rohmaterial, nicht verändern)
-Kontoauszuege (je Konto ein Unterordner laut Steuerprofil) · Scans_Fotos · Mail_Downloads · Telefon · Online_Bestellungen (z. B. eBay, Amazon)
+Kontoauszuege (je Konto ein Unterordner laut Steuerprofil) · Scans_Fotos · Mail_Downloads (optional je Bereich ein Unterordner) · Telefon · Online_Bestellungen (z. B. eBay, Amazon)
 
 ## 2_Steuererklaerung_Wiso/ (Sortierung wie in WISO)
 - 01_Persoenliches

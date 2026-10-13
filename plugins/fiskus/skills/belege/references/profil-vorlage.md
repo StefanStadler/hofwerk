@@ -28,8 +28,25 @@ Diese Datei ausfüllen und als `Steuerprofil.md` im Steuer-Ordner oder Projekt a
 - Besteuerungsform je Bereich (Regelbesteuerung, § 24 UStG, Kleinunternehmer):
 - Optionsbindung je Objekt (bis wann, frühester Wechsel):
 
-## Bereichs-Präfixe für Dateinamen
-Beispiel: LuF, IT, PV-<Standort>, V, AN, KIND, VERS, AgB
+## Bereiche, Präfixe und Gmail-Labels
+Eine Zeile je Bereich. Das Präfix steht im Dateinamen. Das Gmail-Unterlabel bestimmt den Namen unter `Rechnungen/Rechnungen_{JAHR}/` und wird nur für Bereiche vergeben, die hier stehen. Bleibt die Spalte leer, gilt der Bereichsname.
+
+| Bereich | Präfix | Gmail-Unterlabel |
+|---|---|---|
+| Land-/Forstwirtschaft | LuF | Landwirtschaft |
+| IT-Beratung | IT | IT-Beratung |
+| PV-<Standort> | PV-<Standort> | PV-<Standort> |
+| Vermietung | V | Vermietung |
+| Anlage N | AN | Arbeitnehmer |
+
+Weitere Präfixe, z. B.: KIND, VERS, AgB
+
+## Händlerregeln (Absender zu Bereich)
+Eindeutige Absender oder Händler und ihr Bereich. Die Skills schlagen neue Zeilen nach Bestätigung des Nutzers vor. Was nicht eindeutig ist, steht hier nicht und bekommt kein Bereichs-Unterlabel.
+
+| Absender / Händler (Muster) | Bereich | Anmerkung |
+|---|---|---|
+| | | |
 
 ## Konten (Unterordner in 1_Eingang/Kontoauszuege)
 -

@@ -21,7 +21,7 @@ Das Plugin selbst speichert nichts. Der Stand liegt im `Steuerprofil.md` im Steu
    - Die festen Entscheidungen des Vorjahres einzeln nennen und fragen, welche weiter gelten. Nur Änderungen erfragen, den Rest übernehmen.
    - Offene Punkte des Vorjahres übernehmen, die noch zutreffen.
 
-**C. Kein Profil.** Vorlage `../belege/references/profil-vorlage.md` kopieren und in Blöcken ausfüllen: Person, Steuernummern, Einkunftsarten und Objekte, USt-Form und Optionsbindung, Bereichs-Präfixe, Konten, feste Entscheidungen, Vorjahreswerte. Fragen bündeln. Angaben, die in vorhandenen Bescheiden, Belegen oder Notizen stehen, als Vorschlag zur Bestätigung vorlegen, statt sie zu erfragen. Danach wie unter B den Ordner anlegen.
+**C. Kein Profil.** Vorlage `../belege/references/profil-vorlage.md` kopieren und in Blöcken ausfüllen: Person, Steuernummern, Einkunftsarten und Objekte, USt-Form und Optionsbindung, Bereiche mit Präfix und Gmail-Unterlabel (aus den Einkunftsarten als Vorschlag ableiten), Händlerregeln (zunächst leer, wächst später), Konten, feste Entscheidungen, Vorjahreswerte. Fragen bündeln. Angaben, die in vorhandenen Bescheiden, Belegen oder Notizen stehen, als Vorschlag zur Bestätigung vorlegen, statt sie zu erfragen. Danach wie unter B den Ordner anlegen.
 
 3. **Nächsten Schritt starten** und am Ende der Sitzung den Stand sichern (siehe jeweiliger Skill).
 

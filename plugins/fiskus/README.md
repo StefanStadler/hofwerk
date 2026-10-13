@@ -8,7 +8,7 @@ Jahresunabhängiger Steuer-Workflow für Landwirtschaft, Vermietung, Freiberuf u
 |---|---|
 | `start` | Einrichtung des Steuerprofils, Einstieg am gespeicherten Stand, Anlage des neuen Steuerjahrs |
 | `belege` | Belege benennen, drehen, in die WISO-Struktur sortieren, DATEV-Ausgang bereitstellen |
-| `online-rechnungen` | Rechnungen aus Amazon und eBay für Betriebe und Werbungskosten laden (erst Gmail mit Label für den Export im Mail-Programm, danach Chrome als Vollständigkeitsprüfung), benennen, ablegen |
+| `online-rechnungen` | Rechnungen aus Amazon und eBay für Betriebe und Werbungskosten laden (erst Gmail mit Label für den Export im Mail-Programm, danach Chrome als Vollständigkeitsprüfung, Unterlabels je Bereich laut Steuerprofil), benennen, ablegen |
 | `schaetzung` | Steuerlast des Jahres schätzen, Szenarien vergleichen |
 | `ust` | Umsatzsteuer-Jahreserklärung inkl. PV-Anlagen und Optionsbindung |
 

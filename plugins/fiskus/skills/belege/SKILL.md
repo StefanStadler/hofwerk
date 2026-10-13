@@ -15,7 +15,7 @@ Ablauf: `1_Eingang` → (benennen, drehen, prüfen) → `2_Steuererklaerung_Wiso
 
 ## Dokumenteingang
 
-Jede Datei, die der Nutzer im Chat schickt (Scan, Foto, PDF, Kontoauszug, Bescheid), wird als Erstes unverändert in den Eingang des Steuerordners kopiert, bevor etwas damit passiert: `1_Eingang/<Unterordner>` (Kontoauszuege/<Konto>, Scans_Fotos, Mail_Downloads, Online_Bestellungen). Originalname und Inhalt bleiben, nichts wird gedreht, umbenannt oder geändert. Gleiche Inhalte (Hash) nicht doppelt ablegen. Danach arbeiten alle Skills mit Kopien. Dem Nutzer in einem Satz sagen, wo das Original liegt. Ist kein Steuerordner verbunden, trotzdem verarbeiten und darauf hinweisen, dass das Original noch nicht abgelegt ist.
+Jede Datei, die der Nutzer im Chat schickt (Scan, Foto, PDF, Kontoauszug, Bescheid), wird als Erstes unverändert in den Eingang des Steuerordners kopiert, bevor etwas damit passiert: `1_Eingang/<Unterordner>` (Kontoauszuege/<Konto>, Scans_Fotos, Mail_Downloads, Online_Bestellungen). Liegen Mail-Anhänge in Unterordnern von `Mail_Downloads` (je Bereich), ist der Ordnername ein Bereichsvorschlag, keine Entscheidung. Originalname und Inhalt bleiben, nichts wird gedreht, umbenannt oder geändert. Gleiche Inhalte (Hash) nicht doppelt ablegen. Danach arbeiten alle Skills mit Kopien. Dem Nutzer in einem Satz sagen, wo das Original liegt. Ist kein Steuerordner verbunden, trotzdem verarbeiten und darauf hinweisen, dass das Original noch nicht abgelegt ist.
 
 ## Dateinamen
 

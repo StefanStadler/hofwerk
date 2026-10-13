@@ -1,6 +1,6 @@
 {
   "name": "fiskus",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Jahresunabhängiger Steuer-Workflow für Landwirtschaft, Vermietung, Freiberuf und PV: Belege benennen und nach WISO-Struktur sortieren, DATEV-Ausgang, Steuerlast-Schätzung und USt-Jahreserklärung. Persönliche Daten stehen in einer separaten Profil-Datei.",
   "author": {
     "name": "Stefan Stadler"

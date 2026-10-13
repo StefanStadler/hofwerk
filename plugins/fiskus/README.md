@@ -18,6 +18,7 @@ Das Plugin enthält keine persönlichen Daten. Name, Steuernummern, Objekte, Pr�
 
 ## Benutzung
 
+0. Den Steuerordner einmal pro Sitzung freigeben, `start` fragt danach und fordert den Zugriff an.
 1. Beim ersten Mal und zu jedem neuen Steuerjahr: "Starte Steuer {JAHR}" (Skill `start`). Er legt das Steuerprofil an oder setzt am gespeicherten Stand an. Der Stand steht im Abschnitt "Stand Steuerjahr {JAHR}" des `Steuerprofil.md`.
 2. Ordner "Steuer {JAHR}" mit der Struktur aus `skills/belege/references/ordnerstruktur.md` verbinden.
 3. Anfrage stellen, z. B. "Sortiere den Eingang für 2027" oder "Schätze die Steuerlast 2027".

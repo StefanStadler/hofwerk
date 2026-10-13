@@ -13,6 +13,10 @@ Struktur und DATEV-Fächer stehen in `references/ordnerstruktur.md`. Lies sie vo
 
 Ablauf: `1_Eingang` → (benennen, drehen, prüfen) → `2_Steuererklaerung_Wiso` → am Ende als Kopie nach `3_Ausgang_DATEV`. Originale in `1_Eingang` bleiben unverändert, es wird nur kopiert oder innerhalb des Ordners verschoben. Belege, die erst im Folgejahr zählen, kommen nach `9_Archiv/Folgejahr_{JAHR+1}`.
 
+## Dokumenteingang
+
+Jede Datei, die der Nutzer im Chat schickt (Scan, Foto, PDF, Kontoauszug, Bescheid), wird als Erstes unverändert in den Eingang des Steuerordners kopiert, bevor etwas damit passiert: `1_Eingang/<Unterordner>` (Kontoauszuege/<Konto>, Scans_Fotos, Mail_Downloads, Online_Bestellungen). Originalname und Inhalt bleiben, nichts wird gedreht, umbenannt oder geändert. Gleiche Inhalte (Hash) nicht doppelt ablegen. Danach arbeiten alle Skills mit Kopien. Dem Nutzer in einem Satz sagen, wo das Original liegt. Ist kein Steuerordner verbunden, trotzdem verarbeiten und darauf hinweisen, dass das Original noch nicht abgelegt ist.
+
 ## Dateinamen
 
 `<Bereich>_<JJJJ-MM-TT>_<Beschreibung>_<Aussteller>_<Betrag>EUR.pdf`

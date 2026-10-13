@@ -23,6 +23,10 @@ Persönliche Angaben (Steuernummern, Anlagen, Besteuerungsform, Optionsbindung) 
 
 Im Chat: Tabelle je Anlage mit Umsatzsteuer, Vorsteuer, Saldo, darunter Gesamt-Zahllast und Fälligkeit, dann offene Punkte. Dokumente für den Steuerberater enthalten nur Zahlen und Tabellen, keine Hinweise oder Begründungen.
 
+## Dateien aus dem Chat
+
+Dateien, die der Nutzer im Chat schickt, kommen zuerst unverändert in den Eingang (`1_Eingang`, siehe Skill `belege`, Abschnitt Dokumenteingang). Danach wird mit Kopien gearbeitet.
+
 ## Stand sichern
 
 Gestartet wird am gespeicherten Stand im `Steuerprofil.md` (Abschnitt „Stand Steuerjahr {JAHR}“). Fehlt das Profil oder das Jahr, zuerst den Skill `start` ausführen. Nach der Bestätigung des Ergebnisses durch den Nutzer die Zeile „USt“ in diesem Abschnitt aktualisieren: Besteuerungsform je Bereich, Zahllast mit Fälligkeit, geleistete Vorauszahlungen, Stand der Optionsbindung. Nur die eigene Zeile ändern, vorher zeigen, was sich ändert. Neue Entscheidungen des Nutzers unter „Feste Entscheidungen“ eintragen.

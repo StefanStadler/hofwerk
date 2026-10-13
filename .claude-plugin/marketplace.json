@@ -30,6 +30,18 @@
         "passives-einkommen",
         "deckungsgrad"
       ]
+    },
+    {
+      "name": "postfach",
+      "source": "./plugins/postfach",
+      "description": "Gmail-Posteingang nach eigenen Regeln sortieren: Labels vergeben, archivieren, Papierkorb nach Freigabe, Regeln aus Entscheidungen lernen.",
+      "version": "0.1.0",
+      "keywords": [
+        "gmail",
+        "posteingang",
+        "labels",
+        "sortieren"
+      ]
     }
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "name": "postfach",
+  "version": "0.1.0",
+  "description": "Gmail-Posteingang nach eigenen Regeln sortieren: Labels vergeben, archivieren, Papierkorb nach Freigabe, Regeln aus Entscheidungen lernen. Persönliche Regeln stehen in einer separaten Datei.",
+  "author": {
+    "name": "Stefan Stadler"
+  },
+  "keywords": ["gmail", "posteingang", "labels", "mail", "sortieren"]
+}

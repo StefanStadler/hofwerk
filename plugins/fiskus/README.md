@@ -6,6 +6,7 @@ Jahresunabhängiger Steuer-Workflow für Landwirtschaft, Vermietung, Freiberuf u
 
 | Skill | Zweck |
 |---|---|
+| `start` | Einrichtung des Steuerprofils, Einstieg am gespeicherten Stand, Anlage des neuen Steuerjahrs |
 | `belege` | Belege benennen, drehen, in die WISO-Struktur sortieren, DATEV-Ausgang bereitstellen |
 | `online-rechnungen` | Rechnungen aus Amazon und eBay für Betriebe und Werbungskosten laden, benennen, ablegen |
 | `schaetzung` | Steuerlast des Jahres schätzen, Szenarien vergleichen |
@@ -17,7 +18,7 @@ Das Plugin enthält keine persönlichen Daten. Name, Steuernummern, Objekte, Pr�
 
 ## Benutzung
 
-1. Steuerprofil anlegen oder aktualisieren.
+1. Beim ersten Mal und zu jedem neuen Steuerjahr: "Starte Steuer {JAHR}" (Skill `start`). Er legt das Steuerprofil an oder setzt am gespeicherten Stand an. Der Stand steht im Abschnitt "Stand Steuerjahr {JAHR}" des `Steuerprofil.md`.
 2. Ordner "Steuer {JAHR}" mit der Struktur aus `skills/belege/references/ordnerstruktur.md` verbinden.
 3. Anfrage stellen, z. B. "Sortiere den Eingang für 2027" oder "Schätze die Steuerlast 2027".
 

@@ -29,3 +29,7 @@ Tabelle mit den Varianten in den Zeilen und konservativ/wahrscheinlich in den Sp
 - Im Zweifel zugunsten des Nutzers kategorisieren, soweit steuerlich vertretbar.
 - Entscheidungen des Nutzers (z. B. kein Investitionsabzug, Zuflussjahr eines Zuschusses) als gesetzt behandeln und nicht erneut zur Diskussion stellen, außer neue Zahlen sprechen dagegen.
 - Arbeitsdaten und Rechenskripte in `9_Archiv/Arbeitsdateien/` sichern.
+
+## Stand sichern
+
+Gestartet wird am gespeicherten Stand im `Steuerprofil.md` (Abschnitt „Stand Steuerjahr {JAHR}“). Fehlt das Profil oder das Jahr, zuerst den Skill `start` ausführen. Nach der Bestätigung des Ergebnisses durch den Nutzer die Zeile „Schätzung“ in diesem Abschnitt aktualisieren: Datum, Spanne konservativ/wahrscheinlich (ESt plus Soli), USt-Zahllast, wesentliche Annahmen, verglichene Szenarien und die getroffene Entscheidung. Nur die eigene Zeile ändern, vorher zeigen, was sich ändert. Neue Entscheidungen des Nutzers unter „Feste Entscheidungen“ eintragen.

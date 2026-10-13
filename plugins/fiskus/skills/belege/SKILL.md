@@ -41,3 +41,7 @@ Die Bereichs-Präfixe stehen im Steuerprofil. Wo eine Journal-Zuordnung besteht,
 - **DATEV-Upload**: alle Belege als Einzeldateien in die Fächer unter `3_Ausgang_DATEV/` einsortiert. Ein Ordner- oder ZIP-Upload ist im Portal nicht möglich.
 
 Am Ende kurz im Chat zusammenfassen: Anzahl einsortierter Belege je Bereich, offene Punkte, Belege fürs Folgejahr.
+
+## Stand sichern
+
+Gestartet wird am gespeicherten Stand im `Steuerprofil.md` (Abschnitt „Stand Steuerjahr {JAHR}“). Fehlt das Profil oder das Jahr, zuerst den Skill `start` ausführen. Nach der Bestätigung des Ergebnisses durch den Nutzer die Zeile „Belege“ in diesem Abschnitt aktualisieren: Datum der letzten Verarbeitung, Anzahl einsortierter Belege je Bereich, Belege fürs Folgejahr, ob der DATEV-Ausgang vollständig ist. Nur die eigene Zeile ändern, vorher zeigen, was sich ändert. Neue Entscheidungen des Nutzers unter „Feste Entscheidungen“ eintragen.

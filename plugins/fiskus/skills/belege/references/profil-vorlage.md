@@ -40,5 +40,13 @@ Beispiel: Investitionsabzugsbetrag ja/nein, Zuflussjahr bestimmter Zuschüsse, Z
 ## Vorjahreswerte (Vergleich)
 Ergebnisse je Bereich, Kapitalerträge, Bescheide, USt-Zahllast.
 
+## Stand Steuerjahr {JAHR}
+Wird von den Skills nach Bestätigung aktualisiert. Je Zeile Datum und Ergebnis.
+- Belege:
+- Online-Rechnungen:
+- Schätzung:
+- USt:
+- Offene Punkte:
+
 ## Zu klären für das Jahr
 -

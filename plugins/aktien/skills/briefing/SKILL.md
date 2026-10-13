@@ -34,9 +34,20 @@ Fehlt in den Feeds etwas Wichtiges (Zinsentscheid, Quartalszahlen großer Firmen
 
 Quellen nur zitieren, nicht abschreiben: eigene Worte, höchstens ein kurzes Zitat je Quelle.
 
+### CEO-Aussagen aus Google Alerts (optional)
+
+Nur wenn ein Gmail-Konnektor verfügbar ist (Werkzeuge mit dem Präfix `mcp__Gmail__`). Der Nutzer kann Google Alerts für Firmen und Branchen angelegt haben, die als Mails von `googlealerts-noreply@google.com` ankommen. Sonst entfällt dieser Abschnitt.
+
+1. `search_threads` mit `from:googlealerts-noreply@google.com newer_than:1d` (bei Bedarf `newer_than:2d`).
+2. Betreff und Auszug der Mails lesen, bei Bedarf `get_message`. Je Alert stehen dort Titel, Quelle und Link der Treffer.
+3. Nur konkrete Aussagen von Führungskräften übernehmen (Nachfrage, Engpässe, Prognosen, Investitionen). Reine Berichte über Kursbewegungen oder Meinungsartikel auslassen.
+4. In die News aufnehmen, wenn die Aussage marktbewegend ist. Sonst als Signal für `momentum` merken: Firma/Ticker, Aussage in eigenen Worten, Datum, Link.
+5. Treffer gelten als Hinweis, nicht als Beleg. Wichtige Aussagen über eine zweite Quelle bestätigen oder weglassen.
+6. Mails nur lesen, nichts archivieren, löschen oder beantworten.
+
 ## Teil 2: Momentum und Value
 
-1. Skill `momentum` ausführen und sein Ergebnis (Tabelle, Begründungen) übernehmen.
+1. Skill `momentum` ausführen und sein Ergebnis (Tabelle, Begründungen) übernehmen. Die gemerkten CEO-Signale aus den Google Alerts dabei als Expert Signals mitgeben.
 2. Skill `value` ausführen und sein Ergebnis (Tabelle, Begründungen) übernehmen.
 3. Disclaimer und Sources der beiden Teile zu je einem gemeinsamen Abschnitt zusammenführen.
 

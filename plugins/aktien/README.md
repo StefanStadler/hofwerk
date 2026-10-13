@@ -17,13 +17,17 @@ Websuche und Abruf von Webseiten (WebFetch) müssen verfügbar sein. Es werden k
 ## Datenquellen
 
 - **News:** Feeds von Finanznachrichten.de, Handelsblatt, MarketWatch, Investing.com und TechCrunch, per WebSearch ergänzt oder ersetzt, wenn ein Feed ausfällt.
-- **Expert Signals:** TechCrunch-Feed, danach WebSearch nach CEO-Aussagen und Earnings Calls.
+- **Expert Signals:** TechCrunch-Feed, Newsroom- und Investor-Relations-Seiten der Shortlist-Aktien, optional Google-Alert-Mails aus Gmail, danach WebSearch nach CEO-Aussagen und Earnings Calls.
 - **Kennzahlen:** Websuche, vor allem finviz und Yahoo Finance.
 - **Google Finance:** Kurs, 52-Wochen-Spanne und KGV für Aktien außerhalb der US-Börsen sowie die aktuellen Schlagzeilen je Shortlist-Aktie.
 
 ## Optional: Twelve Data
 
 Ist der Konnektor Twelve Data verbunden, prüft `momentum` Kurs, RSI, GD50, GD200 und 52-Wochen-Spanne der Shortlist damit statt per Websuche. Der kostenlose Plan genügt (800 Credits pro Tag, 8 pro Minute), deckt aber nur US-Börsen ab und enthält keine Bewertungskennzahlen. Forward-KGV, PEG, Cashflow und Wachstum kommen deshalb weiter aus der Websuche. Ohne den Konnektor läuft alles wie bisher.
+
+## Optional: Google Alerts über Gmail
+
+Legt der Nutzer Google Alerts an (z. B. `"Firma" CEO OR interview OR "said"`, höchstens einmal täglich), liest `briefing` die Alert-Mails von `googlealerts-noreply@google.com` über den Gmail-Konnektor, übernimmt konkrete CEO-Aussagen und gibt sie als Expert Signals an `momentum` weiter. Die Mailbox wird nur gelesen. Ohne Gmail-Konnektor entfällt der Schritt.
 
 ## Geplante Aufgabe
 

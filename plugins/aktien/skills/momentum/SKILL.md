@@ -22,8 +22,10 @@ Datum immer in den Suchstring aufnehmen.
 1. `https://techcrunch.com/feed/` per WebFetch holen und die Einträge der letzten 3 Tage nach Firmen, CEO-Aussagen, Finanzierungsrunden, Marktgrößen und Börsenbezug durchsehen.
 2. 1 bis 2 relevante Artikel-URLs aus dem Feed per WebFetch lesen. Die Feed-Einträge genügen als Signalbasis, wenn der Abruf scheitert.
 3. Je Signal intern notieren: Firma/Ticker, Signal, Datum, URL. Nur Signale vom heutigen Tag oder den letzten 3 Tagen.
-4. Danach weitere CEO-Aussagen per WebSearch suchen (Earnings-Call-Transkripte, Konferenzen, Branchenausblicke).
-5. Ist der Feed nicht abrufbar oder leer: wie bisher WebSearch, z. B. `site:techcrunch.com [Monat Jahr]` oder `techcrunch AI funding CEO [Monat Jahr]`. WebFetch dann nur auf URLs aus Suchergebnissen.
+4. Liegen aus dem Skill `briefing` bereits CEO-Signale aus Google Alerts vor, diese hier einbeziehen. Läuft `momentum` allein und ist ein Gmail-Konnektor verfügbar, dieselbe Suche selbst ausführen: `from:googlealerts-noreply@google.com newer_than:3d`, nur konkrete Aussagen übernehmen, nichts in der Mailbox verändern.
+5. Für Shortlist-Aktien die Newsroom- oder Investor-Relations-Seite der Firma prüfen: per WebSearch `[Firma] investor relations news` die Seite finden, per WebFetch die aktuellen Mitteilungen lesen. Ein RSS-Feed der Seite ist am besten, die Mitteilungsliste genügt. Fehlt der Zugriff, weglassen und nicht erneut versuchen. Solche Mitteilungen sind Primärquellen und zählen mehr als Schlagzeilen aus Google Finance.
+6. Danach weitere CEO-Aussagen per WebSearch suchen (Earnings-Call-Transkripte, Konferenzen, Branchenausblicke).
+7. Ist der Feed nicht abrufbar oder leer: wie bisher WebSearch, z. B. `site:techcrunch.com [Monat Jahr]` oder `techcrunch AI funding CEO [Monat Jahr]`. WebFetch dann nur auf URLs aus Suchergebnissen.
 
 Qualitätsfilter für Signale: Earnings Calls nicht älter als 8 Wochen, Interviews und Konferenzen nicht älter als 4 Wochen. Die Aussage muss konkret sein (Engpass, Wachstum, Nachfrage, Investitionsabsicht), die Quelle seriös und verifizierbar, der Bezug zu einer Aktie oder einem Sektor herstellbar. Kein Social Media, keine Gerüchte. Ein TechCrunch-Signal mit CEO-Zitat und konkreter Marktgröße darf einen Kandidaten direkt auf die Longlist heben.
 

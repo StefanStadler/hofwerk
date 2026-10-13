@@ -14,6 +14,10 @@ Identifiziert Aktien nach festen Filtern: trendstarke Momentum-Werte, unterbewer
 
 Websuche muss verfügbar sein. Es werden keine Dateien erzeugt, die Ausgabe kommt als Markdown in den Chat.
 
+## Optional: Twelve Data
+
+Ist der Konnektor Twelve Data verbunden, prüft `momentum` Kurs, RSI, GD50, GD200 und 52-Wochen-Spanne der Shortlist damit statt per Websuche. Der kostenlose Plan genügt (800 Credits pro Tag, 8 pro Minute), deckt aber nur US-Börsen ab und enthält keine Bewertungskennzahlen. Forward-KGV, PEG, Cashflow und Wachstum kommen deshalb weiter aus der Websuche. Ohne den Konnektor läuft alles wie bisher.
+
 ## Geplante Aufgabe
 
 Der Skill `briefing` ist als Prompt für einen geplanten Lauf gedacht, zum Beispiel täglich um 6 Uhr: "Erstelle das tägliche Aktien-Briefing mit dem Skill briefing." Persönliche Werte (Depot, ETFs) gehören in den Prompt der Aufgabe, nicht ins Plugin.

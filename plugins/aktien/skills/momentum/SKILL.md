@@ -38,6 +38,25 @@ Qualitätsfilter für Signale: Earnings Calls nicht älter als 8 Wochen, Intervi
 
 Stufe 1 gewinnt. Weichen zwei Quellen der Stufe 1 ab, die konservativere Einschätzung nehmen und mit `⚡ Quellen-Diskrepanz` kennzeichnen. Forward-KGV und PEG primär über finviz.com, Fallback macrotrends.net und Yahoo Finance.
 
+## Technische Werte prüfen (Twelve Data, optional)
+
+Nur wenn Werkzeuge mit dem Präfix `mcp__Twelve_Data__` verfügbar sind. Sonst entfällt dieser Abschnitt und alle Werte kommen wie bisher aus der Websuche.
+
+Der kostenlose Plan hat 800 Credits pro Tag und 8 Credits pro Minute. Deshalb gilt:
+
+1. Nur für die finale Shortlist abrufen, höchstens 10 Aktien, nie für die Longlist.
+2. Je Aktie vier Abrufe:
+   - `get_quote`: Kurs, Tagesänderung, 52-Wochen-Spanne (daraus Abstand zum 52-Wochen-Hoch)
+   - `get_technical_indicator` mit `RSI`, `time_period` 14, `outputsize` 1
+   - `get_technical_indicator` mit `SMA`, `time_period` 50, `outputsize` 1 (GD50)
+   - `get_technical_indicator` mit `SMA`, `time_period` 200, `outputsize` 1 (GD200)
+3. Performance über 1, 3 und 6 Monate: optional über `get_technical_indicator` mit `ROC` und `time_period` 21, 63 und 126, nur wenn das Minutenlimit es zulässt. Sonst Websuche. YTD kommt immer aus der Websuche.
+4. Meldet ein Aufruf, dass die Credits der aktuellen Minute aufgebraucht sind: etwa 60 Sekunden warten (z. B. `sleep 60` in der Shell) und denselben Aufruf wiederholen. Meldet er das Tageslimit: für die übrigen Aktien auf die Websuche wechseln.
+5. Der kostenlose Plan deckt nur US-Börsen ab, auch ADRs wie ASML. Für Heimatbörsen (z. B. XETR) und teils für Asien kommt die Meldung, dass der Plan nicht reicht. Dann für diese Aktie die Websuche nehmen, nicht erneut versuchen.
+6. Nicht im kostenlosen Plan: Forward-KGV, PEG, KBV, Cashflow, Gewinnschätzungen und Wachstumsraten (`get_statistics`, `get_financials`, Teile von `get_analyst_data`). Diese Werte kommen weiter aus der Websuche (finviz).
+
+**Vorrang:** Bei Kurs, RSI, GD50, GD200 und 52-Wochen-Spanne gewinnt Twelve Data vor allen Websuche-Quellen. Weicht die Websuche stark ab, Twelve Data nehmen und nichts melden. Twelve Data in der Sources-Liste als Quelle für Kurs und technische Werte nennen.
+
 ## Auswahlkriterien
 
 Momentum **und** Fundamentals müssen stimmen.

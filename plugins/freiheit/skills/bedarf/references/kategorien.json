@@ -1,0 +1,22 @@
+{
+  "_hinweis": "Allgemeine Händler- und Anbieterregeln ohne persönliche Daten. Reihenfolge: erste passende Regel gewinnt. Eigene Regeln im Finanzprofil nennen und per --regeln eigene.json ergänzen.",
+  "regeln": [
+    {"name": "Lebensmittel", "typ": "variabel", "muster": ["aldi", "norma", "edeka", "rewe", "lidl", "penny", "netto", "denn's", "denns", "tegut", "kaufland", "biomarkt", "globus sb"]},
+    {"name": "Bäcker/Metzger", "typ": "variabel", "muster": ["baeckerei", "bäckerei", "backerei", "metzgerei", "konditor", "kondito", "baecker", "bäcker", "backhaus", "backhau"]},
+    {"name": "Gastronomie", "typ": "variabel", "muster": ["pizzeria", "ristorante", "restaurant", "burger king", "mcdonald", "cafe", "café", "sumup", "imbiss", "gaststaette", "raststaette", "indian"]},
+    {"name": "Tanken", "typ": "variabel", "muster": ["tank", "aral", "esso", "shell", "jet-", "star ", "bp-", "rastanlage"]},
+    {"name": "Drogerie", "typ": "variabel", "muster": ["dm drogerie", "rossmann", "mueller", "müller", "apotheke"]},
+    {"name": "Onlinehandel", "typ": "variabel", "muster": ["amazon", "paypal", "ebay", "zalando"]},
+    {"name": "Baumarkt/Garten", "typ": "variabel", "muster": ["baumarkt", "hagebau", "bauhaus", "obi ", "baywa", "tedi"]},
+    {"name": "Krankenversicherung", "typ": "fix", "muster": ["krankenversicherung", "krankenkasse", "techniker", "aok", "barmer", "gothaer kranken", "debeka kranken"]},
+    {"name": "Versicherung", "typ": "fix", "muster": ["versicherung", "lebensversic", "allianz", "r+v", "arag", "huk", "devk", "vhv"]},
+    {"name": "Kfz-Club/Schutz", "typ": "fix", "jaehrlich": true, "muster": ["adac"]},
+    {"name": "Telefon/Internet", "typ": "fix", "muster": ["telefonica", "vodafone", "telekom", "o2 ", "1und1", "1&1"]},
+    {"name": "Strom/Wasser/Heizung", "typ": "fix", "muster": ["stadtwerke", "energie", "wasserversorgung", "zweckverband"]},
+    {"name": "Kita/Schule", "typ": "fix", "muster": ["kirchenstiftung", "kindergarten", "kita", "hort"]},
+    {"name": "Verein/Spenden", "typ": "fix", "muster": ["e.v.", " ev ", "malteser", "tsv "]},
+    {"name": "Abos", "typ": "fix", "muster": ["anthropic", "claude", "netflix", "spotify", "amazon digital", "prime"]},
+    {"name": "Inkasso/Behörde", "typ": "einmalig", "muster": ["creditreform", "inkasso", "rechtsanw", "finanzamt", "gericht"]},
+    {"name": "Gesundheit", "typ": "einmalig", "muster": ["zahnarzt", "zahnaerzte", "dentes", "arzt", "klinik"]}
+  ]
+}

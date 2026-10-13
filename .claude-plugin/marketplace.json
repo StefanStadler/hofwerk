@@ -12,7 +12,24 @@
       "source": "./plugins/fiskus",
       "description": "Jahresunabhängiger Steuer-Workflow: Belege sortieren, Online-Rechnungen laden, Steuerlast schätzen, Umsatzsteuer vorbereiten.",
       "version": "0.1.0",
-      "keywords": ["steuer", "wiso", "datev", "umsatzsteuer"]
+      "keywords": [
+        "steuer",
+        "wiso",
+        "datev",
+        "umsatzsteuer"
+      ]
+    },
+    {
+      "name": "freiheit",
+      "source": "./plugins/freiheit",
+      "description": "Finanzielle Freiheit: Fixkosten und Lebensbedarf aus Kontoauszügen berechnen, Deckungsgrad des passiven Einkommens prüfen.",
+      "version": "0.1.0",
+      "keywords": [
+        "finanzen",
+        "fixkosten",
+        "passives-einkommen",
+        "deckungsgrad"
+      ]
     }
   ]
 }

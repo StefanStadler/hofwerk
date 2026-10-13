@@ -7,12 +7,14 @@ Persönlicher Plugin-Marketplace für Claude: Werkzeuge für Hof, Steuer, PV und
 | Plugin | Zweck |
 |---|---|
 | [`fiskus`](plugins/fiskus/README.md) | Steuer-Workflow: Belege sortieren, Online-Rechnungen laden, Steuerlast schätzen, Umsatzsteuer vorbereiten |
+| [`freiheit`](plugins/freiheit/README.md) | Finanzielle Freiheit: Fixkosten und Lebensbedarf berechnen, Deckungsgrad des passiven Einkommens prüfen |
 
 ## Installation
 
 ```
 /plugin marketplace add <pfad-oder-repo>
 /plugin install fiskus@hofwerk
+/plugin install freiheit@hofwerk
 ```
 
 ## Neues Plugin hinzufügen

@@ -1,0 +1,9 @@
+{
+  "name": "freiheit",
+  "version": "0.1.0",
+  "description": "Finanzielle Freiheit: Fixkosten und Lebensbedarf aus Kontoauszügen berechnen und mit dem passiven Einkommen vergleichen (Deckungsgrad, Entnahme, Szenarien). Persönliche Daten stehen in einer separaten Profil-Datei.",
+  "author": {
+    "name": "Stefan Stadler"
+  },
+  "keywords": ["finanzen", "fixkosten", "passives-einkommen", "deckungsgrad", "entnahme"]
+}

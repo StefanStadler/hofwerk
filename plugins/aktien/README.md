@@ -16,7 +16,7 @@ Websuche und Abruf von Webseiten (WebFetch) müssen verfügbar sein. Es werden k
 
 ## Datenquellen
 
-- **News:** RSS-Feeds von Handelsblatt, MarketWatch, Investing.com und TechCrunch, per WebSearch ergänzt oder ersetzt, wenn ein Feed ausfällt.
+- **News:** Feeds von Finanznachrichten.de, Handelsblatt, MarketWatch, Investing.com und TechCrunch, per WebSearch ergänzt oder ersetzt, wenn ein Feed ausfällt.
 - **Expert Signals:** TechCrunch-Feed, danach WebSearch nach CEO-Aussagen und Earnings Calls.
 - **Kennzahlen:** Websuche, vor allem finviz und Yahoo Finance.
 

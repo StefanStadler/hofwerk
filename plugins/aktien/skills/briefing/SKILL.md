@@ -15,6 +15,7 @@ Zuerst die RSS-Feeds per WebFetch abrufen. Sie sind ohne Anmeldung erreichbar un
 
 | Feed | URL | Schwerpunkt |
 |---|---|---|
+| Finanznachrichten.de | `https://www.finanznachrichten.de/rss-nachrichten` | Börsenticker auf Deutsch (dpa-AFX, Dow Jones News, ARIVA, XTB), meist nur Überschrift und Link, schnellste Quelle |
 | Handelsblatt Finanzen | `https://feeds.cms.handelsblatt.com/finanzen` | Märkte, Dax, Übernahmen auf Deutsch |
 | MarketWatch | `https://feeds.content.dowjones.io/public/rss/mw_topstories` | US-Märkte, enthält auch Ratgeberartikel, nur Börsenrelevantes übernehmen |
 | Investing.com | `https://www.investing.com/rss/news_25.rss` | Aktienmarkt-News global, Überschrift und Link vor der Übernahme abgleichen |
@@ -22,7 +23,7 @@ Zuerst die RSS-Feeds per WebFetch abrufen. Sie sind ohne Anmeldung erreichbar un
 
 Einträge nach Zeitstempel auf die letzten 24 Stunden filtern, Doppelte zusammenführen und die 4 bis 6 marktbewegendsten wählen. Eine Meldung nur aufnehmen, wenn sie eine Aktie, einen Sektor oder die Gesamtmärkte bewegen kann.
 
-Fehlt in den Feeds etwas Wichtiges (Zinsentscheid, Quartalszahlen großer Firmen, Geopolitik) oder fällt ein Feed aus: ergänzend WebSearch mit Datum und Uhrzeit im Suchstring. Nicht abrufbar und nicht erneut zu versuchen: CNBC, BBC, Tagesschau, SEC und finviz. Der Yahoo-Finance-Feed lieferte veraltete Einträge und wird nicht genutzt.
+Fehlt in den Feeds etwas Wichtiges (Zinsentscheid, Quartalszahlen großer Firmen, Geopolitik) oder fällt ein Feed aus: ergänzend WebSearch mit Datum und Uhrzeit im Suchstring. Nicht abrufbar und nicht erneut zu versuchen: Bloomberg, Reuters, CNBC, BBC, Tagesschau, SEC und finviz. Der Yahoo-Finance-Feed lieferte veraltete Einträge und wird nicht genutzt.
 
 4 bis 6 Meldungen im Stil der Tagesschau-Wirtschaft, sachlich und kompakt. Je Meldung:
 

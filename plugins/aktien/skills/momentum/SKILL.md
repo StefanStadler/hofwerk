@@ -13,6 +13,10 @@ Ausgabe direkt im Chat als Markdown, keine Dateien. Kennzahlen vor Prosa, Abkür
 2. **Fundamentaldaten**: Umsatz- und Gewinnwachstum, vertretbare Bewertung (Forward-KGV, PEG).
 3. **Expert Signals**: konkrete Aussagen von CEOs, aus Earnings Calls und Konferenzen zu Nachfrage, Engpässen, Wachstumsfeldern.
 
+## Verlauf lesen
+
+Zuerst den letzten Verlauf aus Google Drive laden (`../../references/stand-und-verlauf.md`, nur wenn Werkzeuge mit dem Präfix `mcp__Google_Drive__` verfügbar sind). Die Ticker der letzten 14 Tage aus dem Abschnitt Momentum dienen dem Status `Neu` oder `Wdh.`. Aktien der letzten Auswahl, die weiter alle Kriterien erfüllen, nicht künstlich austauschen, und umgekehrt keine Aktie nur wegen Wiederholung streichen. Fehlt der Verlauf, ohne ihn arbeiten.
+
 ## Recherche
 
 Datum immer in den Suchstring aufnehmen.
@@ -86,9 +90,10 @@ Momentum **und** Fundamentals müssen stimmen.
 | # | Ticker | Firma | Region | Branche | Kurs | RSI | 1M % | 3M % | YTD % | Abst. 52W-Hoch | Fwd-KGV | PEG | EPS/Umsatz-Wachstum | Status |
 ```
 
-   Status: `⚡ Neu`, `📌 Wdh.` oder `📌 Alternativkandidat`. Fehlende Daten als `k.A.`, nicht tagesaktuelle Werte mit `Stand: [Datum]` oder `*Schätzung`.
+   Status: `⚡ Neu`, `📌 Wdh. (n Tage)` oder `📌 Alternativkandidat`, belegt durch den Verlauf. Ohne Verlauf `k.A.`. Fehlende Daten als `k.A.`, nicht tagesaktuelle Werte mit `Stand: [Datum]` oder `*Schätzung`.
 3. Nummerierte Begründungen, 1 bis 2 Sätze je Aktie: Momentum-Trigger, Fundamental-Qualität, Bestätigung durch RSI und gleitende Durchschnitte.
 4. Disclaimer: keine Anlageberatung, keine Kaufempfehlung.
 5. Sources-Liste mit allen verwendeten Links.
+6. Läuft `momentum` allein (nicht aus `briefing`): Verlaufseintrag schreiben (`../../references/stand-und-verlauf.md`, Abschnitt Momentum). Läuft es aus `briefing`, schreibt dieses den gemeinsamen Eintrag.
 
 Etwa 500 bis 700 Wörter für diesen Teil.

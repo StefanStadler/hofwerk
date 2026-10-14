@@ -8,6 +8,7 @@ Identifiziert Aktien nach festen Filtern: trendstarke Momentum-Werte, unterbewer
 |---|---|
 | `momentum` | 5 bis 10 trendstärkste Aktien weltweit aus Kursmomentum, Fundamentaldaten und Expert Signals (TechCrunch, CEO-Aussagen) |
 | `value` | 5 global unterbewertete Aktien mit 5x bis 10x Langfristpotenzial, mit Value-Trap-Filter, Burggraben und Katalysator |
+| `start` | Einstieg: richtet den Ordner `Aktien-Briefing` in Google Drive ein (Stand und Verlauf), zeigt später den letzten Lauf |
 | `briefing` | Tägliches Morgen-Briefing: News der letzten 24 Stunden, dann `momentum` und `value` in einem Text |
 
 ## Voraussetzung
@@ -20,6 +21,10 @@ Websuche und Abruf von Webseiten (WebFetch) müssen verfügbar sein. Es werden k
 - **Expert Signals:** TechCrunch-Feed, Newsroom- und Investor-Relations-Seiten der Shortlist-Aktien, optional Google-Alert-Mails aus Gmail, danach WebSearch nach CEO-Aussagen und Earnings Calls.
 - **Kennzahlen:** Websuche, vor allem finviz und Yahoo Finance.
 - **Google Finance:** Kurs, 52-Wochen-Spanne und KGV für Aktien außerhalb der US-Börsen sowie die aktuellen Schlagzeilen je Shortlist-Aktie.
+
+## Stand und Verlauf (Google Drive)
+
+Mit dem Konnektor Google Drive legt `start` den Ordner `Aktien-Briefing` mit dem Doc `Stand` und dem Unterordner `Verlauf` an. Jeder Lauf schreibt einen Eintrag `JJJJ-MM-TT Lauf`. Daraus entstehen `Neu` und `Wdh. (n Tage)` in den Tabellen von `momentum` und `value`. Aufbau und Regeln: `references/stand-und-verlauf.md`. Ohne Drive läuft alles wie bisher, die Status zeigen dann `k.A.`. Keine Kontonummern, Kontostände oder Stückzahlen im Ordner.
 
 ## Optional: Twelve Data
 

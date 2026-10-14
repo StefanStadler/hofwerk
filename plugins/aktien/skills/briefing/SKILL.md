@@ -7,6 +7,10 @@ description: Erstellt das tägliche Aktien-Morgen-Briefing auf Deutsch: marktbew
 
 Ein kompakter Markdown-Text direkt im Chat, keine Dateien. Etwa 1.400 bis 1.800 Wörter gesamt. Bei einem geplanten, unbeaufsichtigten Lauf nicht nachfragen, sondern mit den Vorgaben unten arbeiten.
 
+## Verlauf und Stand
+
+Vor Teil 1, wenn Werkzeuge mit dem Präfix `mcp__Google_Drive__` verfügbar sind: Ordner `Aktien-Briefing` suchen, den `Stand` und den letzten Verlaufseintrag lesen (`../../references/stand-und-verlauf.md`). Depot-Kontext aus dem `Stand` zählt wie der Kontext im Prompt. Fehlt der Ordner, ihn anlegen (unbeaufsichtigt ohne Rückfrage). Fehlt Drive, ohne Verlauf weiterarbeiten und im Text darauf hinweisen.
+
 ## Teil 1: Marktbewegende News
 
 Gesucht sind die wichtigsten Meldungen der letzten 24 Stunden, die Aktien oder Märkte bewegen: Unternehmensmeldungen, Zulassungen und Durchbrüche, Übernahmen, Zinsentscheide, Geopolitik, Quartalszahlen.
@@ -56,6 +60,10 @@ Aktien aus Teil 1, die in Teil 2 auftauchen, in der Begründung kurz verknüpfen
 ## Persönlicher Kontext
 
 Das Plugin enthält keine persönlichen Daten. Hält der Nutzer bestimmte Werte oder ETFs, kann er sie im Prompt der geplanten Aufgabe nennen. Sie dienen dann als Kontext für die Auswahl der News, nicht als Pflicht für die Auswahl der Aktien. Der Nutzer mag keine unerklärten Finanzabkürzungen, deshalb beim ersten Auftreten ausschreiben.
+
+## Verlauf schreiben
+
+Am Ende, nach der Ausgabe: einen Verlaufseintrag `JJJJ-MM-TT Lauf` in `Aktien-Briefing/Verlauf` anlegen (Inhalt laut Referenz): Momentum- und Value-Auswahl mit Rang, Kurs, RSI bzw. Rabatt, Status, die genutzten CEO-Signale und Hinweise zu nicht abrufbaren Quellen. Schlägt das Schreiben fehl, im Text kurz sagen und trotzdem fertigstellen.
 
 ## Reihenfolge
 

@@ -9,6 +9,10 @@ Ausgabe direkt im Chat als Markdown, keine Dateien. Abkürzungen beim ersten Auf
 
 Preis-zu-Wert schlägt hier Momentum. Ein Kurs auf Jahrestief darf qualifizieren, solange das Geschäft trägt und ein Katalysator für die Neubewertung erkennbar ist.
 
+## Verlauf lesen
+
+Zuerst den letzten Verlauf aus Google Drive laden (`../../references/stand-und-verlauf.md`, nur wenn Werkzeuge mit dem Präfix `mcp__Google_Drive__` verfügbar sind). Die Ticker der letzten 14 Tage aus dem Abschnitt Value dienen dem Status `Neu` oder `Wdh.`. Ohne Verlauf `k.A.`.
+
 ## Recherche
 
 Datum in den Suchstring aufnehmen. Beispiele:
@@ -65,8 +69,10 @@ Vorgehen: Longlist mit 8 bis 10 Werten, Trap-Filter anwenden, für die Top 5 P/B
 - **Rabatt z. IV**: Abschlag zum fairen Wert in Prozent, positiv heißt günstiger als Fair Value. Nicht verfügbar: `k.A.`
 - **Burggraben**: `Breit`, `Eng`, `Keiner` oder `k.A.` (Morningstar Economic Moat, wenn verfügbar).
 - **Katalysator**: 1 bis 3 Wörter, z. B. `Spin-off`, `KI-Adoption`, `Restrukturierung`.
-- **Status**: `⚡ Neu`, `📌 Wdh.` oder `⚠️ Zykliker`.
+- **Status**: `⚡ Neu`, `📌 Wdh. (n Tage)` oder `⚠️ Zykliker`, belegt durch den Verlauf. Ohne Verlauf `k.A.`.
 
 Danach je Aktie 2 bis 3 Sätze Begründung: Warum unterbewertet, welche Kennzahl überzeugt am meisten, was ist der Burggraben, was löst die Neubewertung aus, und ein grober Zeitrahmen (z. B. "in 7 bis 10 Jahren plausibel, wenn ...").
 
 Zum Schluss Disclaimer (keine Anlageberatung, 5x bis 10x ist ein Szenario, keine Prognose) und Sources-Liste mit allen Links. Etwa 400 bis 500 Wörter für diesen Teil.
+
+Läuft `value` allein (nicht aus `briefing`): Verlaufseintrag schreiben (`../../references/stand-und-verlauf.md`, Abschnitt Value). Läuft es aus `briefing`, schreibt dieses den gemeinsamen Eintrag.

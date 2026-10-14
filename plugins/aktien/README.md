@@ -32,7 +32,7 @@ Ist der Konnektor Twelve Data verbunden, prüft `momentum` Kurs, RSI, GD50, GD20
 
 ## Optional: Google Alerts über Gmail
 
-Legt der Nutzer Google Alerts an (z. B. `"Firma" CEO OR interview OR "said"`, höchstens einmal täglich), liest `briefing` die Alert-Mails von `googlealerts-noreply@google.com` über den Gmail-Konnektor, übernimmt konkrete CEO-Aussagen und gibt sie als Expert Signals an `momentum` weiter. Die Mailbox wird nur gelesen. Ohne Gmail-Konnektor entfällt der Schritt.
+Legt der Nutzer Google Alerts an (z. B. `"Firma" CEO OR interview OR "said"`, höchstens einmal täglich, am besten als Digest in einer Sammelmail), liest `briefing` die Alert-Mails von `googlealerts-noreply@google.com` über den Gmail-Konnektor, übernimmt konkrete CEO-Aussagen und gibt sie als Expert Signals an `momentum` weiter. Die Mailbox wird nur gelesen. Ohne Gmail-Konnektor entfällt der Schritt.
 
 ## Geplante Aufgabe
 

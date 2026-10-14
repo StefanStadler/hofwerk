@@ -40,10 +40,10 @@ Quellen nur zitieren, nicht abschreiben: eigene Worte, höchstens ein kurzes Zit
 
 ### CEO-Aussagen aus Google Alerts (optional)
 
-Nur wenn ein Gmail-Konnektor verfügbar ist (Werkzeuge mit dem Präfix `mcp__Gmail__`). Der Nutzer kann Google Alerts für Firmen und Branchen angelegt haben, die als Mails von `googlealerts-noreply@google.com` ankommen. Sonst entfällt dieser Abschnitt.
+Nur wenn ein Gmail-Konnektor verfügbar ist (Werkzeuge mit dem Präfix `mcp__Gmail__`). Der Nutzer kann Google Alerts für Firmen und Branchen angelegt haben. Sie kommen von `googlealerts-noreply@google.com`, meist als eine tägliche Sammelmail (Digest) mit einem Abschnitt je Suchbegriff, sonst als einzelne Mails je Alert. Sonst entfällt dieser Abschnitt.
 
 1. `search_threads` mit `from:googlealerts-noreply@google.com newer_than:1d` (bei Bedarf `newer_than:2d`).
-2. Betreff und Auszug der Mails lesen, bei Bedarf `get_message`. Je Alert stehen dort Titel, Quelle und Link der Treffer.
+2. Die Mails mit `get_thread` vollständig lesen, weil die Suche nur Vorschauen liefert. Je Suchbegriff stehen dort Titel, Quelle und Link der Treffer. Beim Digest die Abschnitte der Reihe nach durchgehen.
 3. Nur konkrete Aussagen von Führungskräften übernehmen (Nachfrage, Engpässe, Prognosen, Investitionen). Reine Berichte über Kursbewegungen oder Meinungsartikel auslassen.
 4. In die News aufnehmen, wenn die Aussage marktbewegend ist. Sonst als Signal für `momentum` merken: Firma/Ticker, Aussage in eigenen Worten, Datum, Link.
 5. Treffer gelten als Hinweis, nicht als Beleg. Wichtige Aussagen über eine zweite Quelle bestätigen oder weglassen.

@@ -17,6 +17,12 @@ Ablauf: `1_Eingang` → (benennen, drehen, prüfen) → `2_Steuererklaerung_Wiso
 
 Jede Datei, die der Nutzer im Chat schickt (Scan, Foto, PDF, Kontoauszug, Bescheid), wird als Erstes unverändert in den Eingang des Steuerordners kopiert, bevor etwas damit passiert: `1_Eingang/<Unterordner>` (Kontoauszuege/<Konto>, Scans_Fotos, Mail_Downloads, Online_Bestellungen). Liegen Mail-Anhänge in Unterordnern von `Mail_Downloads` (je Bereich), ist der Ordnername ein Bereichsvorschlag, keine Entscheidung. Originalname und Inhalt bleiben, nichts wird gedreht, umbenannt oder geändert. Gleiche Inhalte (Hash) nicht doppelt ablegen. Danach arbeiten alle Skills mit Kopien. Dem Nutzer in einem Satz sagen, wo das Original liegt. Ist kein Steuerordner verbunden, trotzdem verarbeiten und darauf hinweisen, dass das Original noch nicht abgelegt ist.
 
+## Stapelverarbeitung
+
+Liegen mehr als etwa 15 neue Dateien in `1_Eingang`, in Stapel zu je 10 bis 15 Dateien teilen und je Stapel einen Subagenten `beleg-aufbereiter` über das Agent-Tool starten, möglichst parallel. Dem Subagenten die Dateipfade, den Pfad zu `scripts/drehen_und_pdf.py` (in diesem Skill-Ordner), den Arbeitsordner `9_Archiv/Arbeitsdateien/gedreht` und die Bereichs-Präfixe aus dem Steuerprofil mitgeben. Er liest jede Datei, erzeugt gedrehte PDF-Kopien im Arbeitsordner (Originale bleiben unverändert) und liefert pro Datei Eckdaten zurück.
+
+Der Haupt-Agent führt die Listen zusammen, prüft Dubletten (Regel 7) und Erstattungen (Regel 8), vergibt Bereich und Belegnummer, benennt die PDF-Kopien nach dem Schema aus „Dateinamen“ und sortiert sie ein. Die Rotation weiterhin stichprobenartig selbst prüfen (Regel 3). Bei wenigen Dateien ohne Subagent arbeiten und das Skript `drehen_und_pdf.py` selbst aufrufen.
+
 ## Dateinamen
 
 `<Bereich>_<JJJJ-MM-TT>_<Beschreibung>_<Aussteller>_<Betrag>EUR.pdf`

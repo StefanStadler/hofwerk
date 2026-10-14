@@ -12,6 +12,12 @@ Jahresunabhängiger Steuer-Workflow für Landwirtschaft, Vermietung, Freiberuf u
 | `schaetzung` | Steuerlast des Jahres schätzen, Szenarien vergleichen |
 | `ust` | Umsatzsteuer-Jahreserklärung inkl. PV-Anlagen und Optionsbindung |
 
+## Subagenten
+
+| Agent | Zweck |
+|---|---|
+| `beleg-aufbereiter` | Liest einen Stapel Belege aus dem Eingang, erzeugt mit `skills/belege/scripts/drehen_und_pdf.py` gedrehte PDF-Kopien im Arbeitsordner und liefert Eckdaten je Datei. Benennen und Einsortieren macht der Skill `belege` selbst. Wird ab etwa 15 neuen Dateien eingesetzt |
+
 ## Persönliche Daten
 
 Das Plugin enthält keine persönlichen Daten. Name, Steuernummern, Objekte, Präfixe, Entscheidungen und Vorjahreswerte stehen in einer separaten Datei `Steuerprofil.md` im Steuer-Ordner oder Projekt. Eine Vorlage liegt unter `skills/belege/references/profil-vorlage.md`.
